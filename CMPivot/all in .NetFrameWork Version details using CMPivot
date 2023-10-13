@@ -1,0 +1,31 @@
+Operatingsystem 
+| project device, Caption| join (Registry('HKLM:\SOFTWARE\Microsoft\Net framework Setup\NDP\v4\Full') | where Property == 'Release' ) 
+| project device,caption,key,value,
+case
+(
+value == '528372','.Net frameWork 4.8',
+value == '378389','.NET Framework 4.5',
+value == '378675','.NET Framework 4.5.1',
+value == '378758','.NET Framework 4.5.1',
+value == '379893','.NET Framework 4.5.2',
+value == '393295','.NET Framework 4.6',
+value == '393297','.NET Framework 4.6',
+value == '394254','.NET Framework 4.6.1', 
+value == '394271','.NET Framework 4.6.1',
+value == '394294','.NET Framework 4.6.1', 
+value == '394802','.NET Framework 4.6.2', 
+value == '394806','.NET Framework 4.6.2', 
+value == '460798','.NET Framework 4.7', 
+value == '460805','.NET Framework 4.7', 
+value == '461308','.NET Framework 4.7.1', 
+value == '461310','.NET Framework 4.7.1', 
+value == '461808','.NET Framework 4.7.2', 
+value == '461814','.NET Framework 4.7.2', 
+value == '528040','.NET Framework 4.8', 
+value == '528049','.NET Framework 4.8', 
+value == '528372','.NET Framework 4.8',
+value == '528449','.NET Framework 4.8',
+value == '528049','.NET Framework 4.8',
+value == '533320','.NET Framework 4.8.1',
+value == '533325','.NET Framework 4.8.1',
+'Need to Know Which .Net Version' )
