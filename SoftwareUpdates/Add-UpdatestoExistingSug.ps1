@@ -32,10 +32,10 @@ $usedRange.Font.Bold = $True
 $row = 2
 
 # Define the name of the Software Update Group (SUG) we're adding updates to
-$sugName = "Baseline - Lenovo Driver Updates"
+$sugName = "Software Update group Name"
 
 # Import update titles from the provided CSV file
-$updates = Import-Csv -Path E:\Scripts\updatetitle.csv | ForEach-Object { $_.UpdateTitle }
+$updates = Import-Csv -Path E:\Path to\updatetitle.csv | ForEach-Object { $_.UpdateTitle }
 
 # Loop through each update title
 foreach ($updateTitle in $updates) {
